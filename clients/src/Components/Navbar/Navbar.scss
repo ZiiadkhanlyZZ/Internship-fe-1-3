@@ -1,0 +1,62 @@
+@import "../../css-config/mixins.scss";
+.header {
+  min-height: 80px;
+  background: #f9f9f9;
+  @include flex();
+  border-bottom: 1px solid #ddd;
+  .navbar {
+    @include flex();
+    flex-wrap: wrap;
+    .navbar-list {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      @include flex();
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include xs {
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      li {
+        @include flex();
+        gap: 20px;
+        @include xs {
+          flex-direction: column;
+        }
+        .userId {
+          @include flex();
+          gap: 20px;
+          button {
+            padding: 10px 15px;
+            color: #fff;
+            background-color: red;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 4px;
+            outline: 0;
+            border: 0;
+          }
+          p {
+            margin: 0;
+            text-transform: capitalize;
+            font-weight: bold;
+            span {
+              text-transform: none;
+            }
+          }
+        }
+        h1 {
+          font-size: 30px;
+          a {
+            color: #071c1f;
+          }
+        }
+        a {
+          font-size: 20px;
+          color: #071c1f;
+        }
+      }
+    }
+  }
+}

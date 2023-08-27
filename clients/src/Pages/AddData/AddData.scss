@@ -1,0 +1,66 @@
+@import "../../css-config/mixins.scss";
+.add-data {
+  min-height: 100vh;
+  padding: 30px 0;
+  @include flex();
+  justify-content: center;
+  .form {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: min-content;
+    background-color: #f9f9f9;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    .row {
+      row-gap: 20px;
+      .input-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        label {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1.5;
+          color: black;
+        }
+        input {
+          border-radius: 4px;
+          height: 45px;
+          padding: 10px 20px;
+          border: 1px solid #ddd;
+          color: black;
+          &.file {
+            border: 0;
+          }
+          &::placeholder {
+            text-transform: capitalize;
+          }
+        }
+        textarea {
+            resize: none;
+          min-height: 150px;
+          border: 1px solid #ddd;
+          padding: 20px;
+          &::placeholder {
+            text-transform: capitalize;
+          }
+        }
+        button {
+          height: 40px;
+          width: 200px;
+          @include flex();
+          color: #fff;
+          justify-content: center;
+          margin: 0 auto;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          background-color: #021d02;
+          transition: 0.5s;
+          &:hover {
+            background-color: rgb(17, 158, 17);
+          }
+        }
+      }
+    }
+  }
+}
